@@ -2,31 +2,39 @@ import java.util.ArrayList;
 
 public class Matrix
 {
-    public Matrix() {
-    }
-    public static ArrayList<Integer> indexesOfNullColumns(int[][] matrix)
+    public Matrix()
     {
-        ArrayList<Integer> matrixnull = new ArrayList<>();
-        for (int i = 0; i < matrix.length; i++)
+
+    }
+    public static ArrayList<Integer> indexesOfNullColumns(int [][]matrix){
+        ArrayList<Integer> index = new ArrayList<>();
+        for (int i=0;i<matrix[0].length;i++)
         {
-            if(matrix[0][i]==0)
+            for(int j =0;j < matrix.length;j++)
             {
-                matrixnull.add(i);
+                if(matrix[j][i] !=0 )
+                {
+                    break;
+                }
+                if(j == matrix.length-1)
+                {
+                    index.add(i);
+                }
             }
         }
-        return matrixnull;
+        return index;
     }
     public static int[] indexOfMaximum(int[][] matrix)
     {
         int[] maxelem = new int[2];
         ArrayList<Integer> all = new ArrayList<>();
-        for (int[] ints : matrix) {
-            for (int anInt : ints) {
+        for (int[] ints : matrix)
+        {
+            for (int anInt : ints)
+            {
                 all.add(anInt);
             }
         }
-
-
         int maximum = all.get(0);
         for (int i = 1; i < all.size(); i++) {
             if (maximum < all.get(i))
@@ -41,8 +49,6 @@ public class Matrix
                 {
                     maxelem[0]=i;
                     maxelem[1]=j;
-                    //i= matrix.length-1;
-                    //j=matrix[i].length-1;
                     break outerloop;
                 }
             }
