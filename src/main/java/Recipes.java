@@ -3,7 +3,9 @@ import java.util.Objects;
 
 public class Recipes
 {
-    public Recipes() {
+    public Recipes()
+    {
+        //void
     }
     protected ArrayList<String[]> recipes = new ArrayList<>();
     public void add(String name, String description)

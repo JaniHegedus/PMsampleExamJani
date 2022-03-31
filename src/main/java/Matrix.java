@@ -4,9 +4,10 @@ public class Matrix
 {
     public Matrix()
     {
-
+        //void
     }
-    public static ArrayList<Integer> indexesOfNullColumns(int [][]matrix){
+    public static ArrayList<Integer> indexesOfNullColumns(int [][]matrix)
+    {
         ArrayList<Integer> index = new ArrayList<>();
         for (int i=0;i<matrix[0].length;i++)
         {
@@ -36,7 +37,8 @@ public class Matrix
             }
         }
         int maximum = all.get(0);
-        for (int i = 1; i < all.size(); i++) {
+        for (int i = 1; i < all.size(); i++)
+        {
             if (maximum < all.get(i))
                 maximum = all.get(i);
         }
